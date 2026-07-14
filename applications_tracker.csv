@@ -1,4 +1,4 @@
-﻿id,date_added,company,role,req_id,location,source,job_url,status,date_applied,fit_score,decision_notes,resume_file,cover_letter_file,outcome_next_step,dedupe_key,type
+id,date_added,company,role,req_id,location,source,job_url,status,date_applied,fit_score,decision_notes,resume_file,cover_letter_file,outcome_next_step,dedupe_key,type
 1,2026-06-22,Compass,Senior Product Manager,,,,https://www.compass.com/careers/?gh_jid=8014698&gh_src=Simplify&gh_board=urbancompass,Applied,2026-06-22,,,Resumes/Anna_Kharzhevskaia_Compass_Senior_PM.docx,,,compass | senior product manager,app
 2,2026-06-22,Parametric,Program Manager,,,,https://ms.wd5.myworkdayjobs.com/External/job/Seattle-Washington-United-States-of-America/Program-Manager---Parametric_PT-JR037957-1,Applied,2026-06-22,,,Resumes/Anna_Kharzhevskaia_Program_Manager_Parametric.docx,,,parametric | program manager,app
 3,2026-06-22,D Staff (staffing),Program Manager,,,SmartRecruiters,https://jobs.smartrecruiters.com/dstaff/94912922,Applied,2026-06-22,,,Resumes/Anna_Kharzhevskaia_Program_Manager_Resume.docx,,,d staff | program manager,app
