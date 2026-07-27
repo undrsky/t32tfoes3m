@@ -33,6 +33,7 @@ tr:hover td{background:#eef3f9}
 .s-ready{background:rgba(217,164,65,.16);color:var(--ready)}
 .s-applied{background:rgba(74,144,217,.16);color:var(--applied)}
 .s-rejected{background:rgba(217,83,79,.16);color:var(--rej)}
+.s-interviewrejected{background:rgba(230,126,34,.18);color:#a8560f}
 .s-interview{background:rgba(92,184,92,.16);color:var(--int)}
 .s-offer{background:rgba(155,89,182,.18);color:var(--offer)}
 .s-skipped{background:rgba(127,136,150,.16);color:var(--skip)}
@@ -70,7 +71,7 @@ document.getElementById('updated').textContent = 'Updated ' + new Date().toLocal
 const counts={}; DATA.forEach(r=>{if(r.type==='app')counts[r.dedupe_key]=(counts[r.dedupe_key]||0)+1;});
 DATA.forEach(r=> r._dup = r.type==='app' && counts[r.dedupe_key]>1);
 function sCls(s){return 's-'+(s||'').toLowerCase().replace(/[^a-z]/g,'');}
-const STATUSES=['Resume ready','Applied','Interview','Offer','Rejected','Skipped','Template'];
+const STATUSES=['Resume ready','Applied','Interview','Offer','Interview Rejected','Rejected','Skipped','Template'];
 const selStatus=document.getElementById('fStatus');
 STATUSES.forEach(s=>{const o=document.createElement('option');o.value=s;o.textContent=s;selStatus.appendChild(o);});
 let sortK='date_added', sortDir=-1, statusFilter='';
@@ -102,7 +103,7 @@ function render(){
     tb.appendChild(tr);});
   // stats
   const by={}; DATA.forEach(r=>by[r.status]=(by[r.status]||0)+1);
-  const order=['Resume ready','Applied','Interview','Offer','Rejected','Skipped','Template'];
+  const order=['Resume ready','Applied','Interview','Offer','Interview Rejected','Rejected','Skipped','Template'];
   const st=document.getElementById('stats');st.innerHTML='';
   const all=document.createElement('div');all.className='chip'+(statusFilter===''?' active':'');
   all.innerHTML=`<b>${DATA.length}</b><span>Total</span>`;all.onclick=()=>{statusFilter='';render();};st.appendChild(all);
